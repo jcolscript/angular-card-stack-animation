@@ -1,0 +1,86 @@
+.advantages {
+  height: 100vw;
+
+  &__stack {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    &__card {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 340px;
+      margin: 0 auto;
+      border-radius: 2px;
+      border-radius: 16px;
+      background-color: #fff;
+      background-repeat: cover;
+      list-style: none;
+      text-align: center;
+      box-shadow: 0px 0 22px 18px rgb(31 31 31 / 10%);
+      transition: transform 200ms;
+
+      p {
+        margin: 55px;
+      }
+
+      &:nth-last-child(n + 4) {
+        --y: calc(0% + 0px);
+        transform: translate(30%, var(--y)) scale(1);
+      }
+
+      &:nth-last-child(3) {
+        --y: calc(0% + 0px);
+        transform: translate(20%, var(--y)) scale(1);
+      }
+
+      &:nth-last-child(2) {
+        --y: calc(0% + 0px);
+        transform: translate(10%, var(--y)) scale(1);
+      }
+
+      &:nth-last-child(1) {
+        --y: calc(0% + 0px);
+        transform: translate(0%, var(--y)) scale(1);
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+
+    a + a {
+      margin-left: 10px;
+    }
+  }
+}
+
+@keyframes changeExit {
+  50% {
+    transform: translate(-90%, 0%) scale(0.85) rotate(-5deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate(30%, 0%) scale(1);
+    z-index: -1;
+  }
+}
+
+@keyframes changeEntry {
+  50% {
+    transform: translate(-98%, 0%) scale(0.85) rotate(-5deg);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    z-index: 1;
+  }
+}
