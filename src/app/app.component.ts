@@ -9,6 +9,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('stack', { static: true })
   stack!: ElementRef;
   public advantages = [1, 2, 3, 4];
+  public cardSelected = 1;
 
   ngAfterViewInit() {
     [...this.stack.nativeElement.children]
@@ -28,6 +29,17 @@ export class AppComponent implements AfterViewInit {
 
   prev() {
     let card = this.stack.nativeElement.children[0];
+    card.style.animation = 'changeEntry 700ms forwards';
+
+    setTimeout(() => {
+      card.style.animation = '';
+      this.stack.nativeElement.append(card);
+    }, 800);
+  }
+
+  selectCard(index: number) {
+    this.cardSelected = index;
+    let card = this.stack.nativeElement.querySelector(`.pos${index}`);
     card.style.animation = 'changeEntry 700ms forwards';
 
     setTimeout(() => {

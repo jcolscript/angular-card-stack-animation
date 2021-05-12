@@ -1,35 +1,36 @@
 <div class="advantages">
   <div #stack class="advantages__stack">
-    <div class="advantages__stack__card">
+    <div class="advantages__stack__card pos1">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Praesent pulvinar porta orci, a facilisis sapien varius id.
         Donec pharetra nisl arcu, at suscipit ante viverra et.
-        Nam eget venenatis justo.</p>
+        Nam eget venenatis justo. 1</p>
     </div>
-    <div class="advantages__stack__card">
+    <div class="advantages__stack__card pos2">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Praesent pulvinar porta orci, a facilisis sapien varius id.
         Donec pharetra nisl arcu, at suscipit ante viverra et.
-        Nam eget venenatis justo.</p>
+        Nam eget venenatis justo. 2</p>
     </div>
-    <div class="advantages__stack__card">
+    <div class="advantages__stack__card pos3">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Praesent pulvinar porta orci, a facilisis sapien varius id.
         Donec pharetra nisl arcu, at suscipit ante viverra et.
-        Nam eget venenatis justo.</p>
+        Nam eget venenatis justo. 3</p>
     </div>
-    <div class="advantages__stack__card">
+    <div class="advantages__stack__card pos4">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Praesent pulvinar porta orci, a facilisis sapien varius id.
         Donec pharetra nisl arcu, at suscipit ante viverra et.
-        Nam eget venenatis justo.</p>
+        Nam eget venenatis justo. 4</p>
     </div>
   </div>
   <div class="advantages__actions">
     <a href="#" (click)="prev()">Prev</a>
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
+    <a href="#" (click)="selectCard(1)">1</a>
+    <a href="#" (click)="selectCard(2)">2</a>
+    <a href="#" (click)="selectCard(3)">3</a>
+    <a href="#" (click)="selectCard(4)">4</a>
     <a href="#" (click)="next()">Next</a>
   </div>
 </div>
